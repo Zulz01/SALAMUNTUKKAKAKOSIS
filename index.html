@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Surat Untuk OSIS - SMKN 2 LINGSAR</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Courier New', monospace;
+      padding: 40px;
+      color: #333;
+    }
+    .typing-container {
+      border: 2px solid #ccc;
+      background: #fff;
+      padding: 30px;
+      width: 80%;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      font-size: 16px;
+    }
+    .cursor {
+      display: inline-block;
+      background-color: #333;
+      width: 10px;
+      height: 18px;
+      margin-left: 2px;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typing-container" id="typing-text">
+    <span id="typed"></span><span class="cursor"></span>
+  </div>
+
+  <script>
+    const text = `Peserta Didik Baru Kelas X  A/N ZULZ KIFLI / ZUL
+SMKN 2 LINGSAR  
+
+Kepada Yth.  
+Kakak-Kakak OSIS  
+SMKN 2 LINGSAR  
+di Tempat  
+
+Dengan hormat,  
+
+Saya selaku siswa baru di SMKN 2 LINGSAR ingin mengucapkan terima kasih yang sebesar-besarnya kepada kakak-kakak OSIS yang telah membimbing dan mendampingi kami selama kegiatan Masa Pengenalan Lingkungan Sekolah (MPLS).
+
+Bimbingan dan semangat dari kakak-kakak OSIS membuat saya merasa lebih nyaman dan bersemangat menjalani hari-hari pertama di sekolah ini. Saya sangat menghargai kerja keras, keramahan, dan perhatian yang diberikan.
+
+Semoga kakak-kakak OSIS selalu diberikan kesehatan dan semangat dalam menjalankan tugas. Terima kasih telah menjadi contoh yang baik bagi kami, btw kkak osis yg bernama anisa i love u.`;
+
+    let i = 0;
+    const speed = 40;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typed").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>
